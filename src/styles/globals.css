@@ -6,6 +6,7 @@
   --foreground-text-rgb: rgb(52, 58, 64);
   --foreground-rgb: rgb(33, 37, 41);
   --primary-rgb: rgba(82, 113, 255, 1);
+  --primary-soft-rgb: rgb(193, 204, 250);
   --secondary-rgb: rgba(255, 194, 41, 1);
   --background-start-rgb: rgb(212, 218, 232);
   --background-end-rgb: rgb(255, 255, 255);

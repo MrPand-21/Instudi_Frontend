@@ -2,6 +2,10 @@ import '../styles/globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import siteMetadata from '../siteMetadata.js'
+import Image from 'next/image'
+import Logo from "../../public/static/2.png"
+import Link from 'next/link'
+import { HiLogin } from 'react-icons/hi'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -58,7 +62,44 @@ export default function RootLayout({
 }) {
   return (
     <html lang={siteMetadata.language}>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className='w-screen fixed backdrop-blur-sm 	backdrop-filter: brightness(.5); text-[var(--foreground-rgb)] bg-slate-300/10 align-middle text-center h-[10vh] flex flex-row  '>
+          <Image src={Logo} alt="Instudi Logo" width={100} height={150} className='shrink' />
+          <div className='basis-1/4'></div>
+          <div className='grow flex flex-row-reverse items-center justify-center'>
+
+            <div className='grow flex justify-center items-center group'>
+              <button className='rounded-lg border-4 border-[var(--secondary-rgb)] hover:bg-[var(--secondary-rgb)] hover:scale-110 transition-all  w-[clamp(1rem,3vw,3rem)] max-h-fit p-2 hover:px-3 box-content'>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="aspect-square w-8 fill-[var(--primary-rgb)] group-hover:w-10 transition-all" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z" />
+                  <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+                </svg>
+              </button>
+            </div>
+            <Link className='text-xl antialiased grow underline underline-offset-2 decoration-wavy
+            decoration-[var(--secondary-rgb)] font-medium text-[var(--primary-rgb)] hover:font-semibold hover:text-2xl hover:no-underline transition-all ' href='/'>
+              Dersler
+            </Link>
+            <Link className='text-xl antialiased grow underline underline-offset-2 decoration-wavy
+            decoration-[var(--secondary-rgb)] font-medium text-[var(--primary-rgb)]  hover:font-semibold hover:text-2xl hover:no-underline transition-all' href='/'>
+              Podcast
+            </Link>
+            <Link className='text-xl antialiased grow underline underline-offset-2 decoration-wavy
+            decoration-[var(--secondary-rgb)] font-medium text-[var(--primary-rgb)]  hover:font-semibold hover:text-2xl hover:no-underline transition-all' href='/about'>
+              Webinarlar
+            </Link>
+            <Link className='text-xl antialiased grow underline underline-offset-2 decoration-wavy
+            decoration-[var(--secondary-rgb)] font-medium text-[var(--primary-rgb)]  hover:font-semibold hover:text-2xl hover:no-underline transition-all' href='/contact'>
+              Anasayfa
+            </Link>
+
+          </div>
+          <div className='basis-5'></div>
+        </div>
+        <div className='pt-[15vh]'>
+          {children}
+        </div>
+      </body>
     </html>
   )
 }
