@@ -59,9 +59,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
-    <html lang={siteMetadata.language}>
+    <html lang={siteMetadata.language} className='overflow-x-hidden'>
       <body className={inter.className}>
-        <div className='w-screen fixed backdrop-blur-sm z-50 invisible md:visible	backdrop-filter: brightness(.5); text-[var(--foreground-rgb)] bg-slate-300/10 align-middle text-center h-[10vh] flex flex-row  '>
+        <div className='w-[100vw] fixed backdrop-blur-sm z-50 invisible md:visible	backdrop-filter: brightness(.5); text-[var(--foreground-rgb)] bg-slate-300/10 align-middle text-center h-[10vh] flex flex-row  '>
           <Image
             src={Logo}
             alt='Instudi Logo'
@@ -76,7 +76,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
             height={150}
             className='shrink hidden 2xl:inline-block'
           />
-          <div className='basis-1/4'></div>
+          <div className='basis-[32%]'></div>
           <div className='grow flex flex-row-reverse items-center justify-center'>
             <div className='grow flex justify-center items-center group'>
               <button className='rounded-lg border-4 border-[var(--secondary-rgb)] hover:bg-[var(--secondary-rgb)] hover:scale-110 transition-all  w-[clamp(1rem,3vw,3rem)] max-h-fit p-2 hover:px-3 box-content'>
