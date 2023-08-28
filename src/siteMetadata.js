@@ -3,7 +3,7 @@ const siteMetadata = {
     author: 'Instudi',
     description: 'Eğitimde yeni bir nefes',
     language: 'tr',
-    siteUrl: 'https://instudi.com',
+    siteUrl: 'https://instudi.vercel.app',
     siteLogo: '/static/2.png',
     socialBanner: '/static/2.png',
     email: 'support@instudi.com',
