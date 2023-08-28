@@ -62,7 +62,7 @@ export default function Home() {
           </button>
         </div>
       </div>
-      <div className='w-full flex-initial 2xl:basis-9/12'>
+      <div className='w-full flex-initial 2xl:basis-7/12'>
         <Image
           alt='Instudi'
           src={InstudiApp}
@@ -78,10 +78,10 @@ export default function Home() {
       bg-[var(--primary-rgb)] '></div>
       <div
         className='top-32 lg:top-[12%] sm:right-[28%] sm:top-[5%] sm:w-16 aspect-square w-10 md:w-[5rem] lg:w-20 -right-2 md:right-[15%]
-       lg:right-1/3 2xl:w-28 absolute origin-top-left  bg-[var(--secondary-rgb)]'></div>
+       lg:right-1/3 2xl:w-24 absolute origin-top-left  bg-[var(--secondary-rgb)]'></div>
       <div
         className='top-40 aspect-square sm:right-[36%] sm:top-[10%] sm:w-12 w-8 md:w-[4rem] lg:w-16 right-5 md:right-[20%] md:top-44 
-      lg:right-[38.3%] 2xl:w-[5.5rem] lg:top-[18%] absolute origin-top-left  bg-[var(--secondary-rgb)]'></div>
+      lg:right-[38.3%] 2xl:w-20 lg:top-[18%] absolute origin-top-left  bg-[var(--secondary-rgb)]'></div>
     </main>
   );
 }
