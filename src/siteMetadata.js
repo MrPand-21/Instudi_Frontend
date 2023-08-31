@@ -1,7 +1,7 @@
 const siteMetadata = {
     title: 'Instudi',
     author: 'Instudi',
-    description: 'Eğitimde yeni bir nefes',
+    description: 'Eğitimde yeni jenerasyon!',
     language: 'tr',
     siteUrl: 'https://instudi.vercel.app',
     siteLogo: '/static/2.png',

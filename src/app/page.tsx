@@ -1,14 +1,15 @@
 import logger from '@/utils/logger';
 import Image from 'next/image';
 import InstudiApp from '../../public/static/instudiAppPage.png';
+import CrButton from '@/components/CrButton';
+import CrInstudiText from '@/components/CrInstudiText';
+import CrNavButton from '@/components/usecase/CrNavButton';
 
 export default function Home() {
   return (
     <main className='h-screen w-screen px-10 flex flex-wrap lg:flex-nowrap flex-row'>
       <div className='w-full  pt-[10vh]'>
-        <p className='text-6xl md:text-9xl block indent-8 tracking-[-.1em] antialiased font-bold bg-gradient-to-br from-violet-600 to-indigo-600 bg-clip-text text-transparent'>
-          Instudi
-        </p>
+        <CrInstudiText useImg={false} />
         <div
           className='whitespace-pre-line mt-10 text-lg md:text-2xl 2xl:text-3xl inline-block antialiased peer tracking-tight group
         leading-loose mb-10'>
@@ -35,32 +36,14 @@ export default function Home() {
             Öğrenmek isteyen herkes için bir <span className=''>platform.</span>
           </div>
         </div>
-        <div className='group opacity-80 hover:opacity-100 inline transition-all peer-hover:opacity-100'>
-          <button
-            className='2xl:mt-10 rounded-lg border-4 shadow-xl group-hover:shadow-2xl border-[var(--secondary-rgb)] 
-          hover:bg-[var(--secondary-rgb)] hover:scale-110 transition-all w-[60vw] 2xl:w-[30vw] lg:w-[clamp(6rem,12vw,11em)] 
-          max-h-fit p-2 hover:px-3 box-content'>
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              fill='currentColor'
-              className='aspect-square w-8 2xl:w-12 fill-[var(--primary-rgb)] inline-block float-right mr-10 md:mr-0 2xl:mr-10 md:float-left 2xl:float-right group-hover:w-10 transition-all'
-              viewBox='0 0 16 16'>
-              <path
-                fillRule='evenodd'
-                d='M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z'
-              />
-              <path
-                fillRule='evenodd'
-                d='M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z'
-              />
-            </svg>
-            <p
-              className='group-hover:text-xl pt-1 transition-all group-hover:text-[var(--primary-rgb)]
-            group-hover:translate-x-2 group-hover:translate-y-0.5 2xl:text-2xl'>
-              Giriş Yap!
-            </p>
-          </button>
-        </div>
+        <CrNavButton
+          svgDs={[
+            'M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z',
+            'M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z',
+          ]}
+          content='Giriş Yap!'
+          url='/login'
+        />
       </div>
       <div className='w-full flex-initial 2xl:basis-7/12'>
         <Image
