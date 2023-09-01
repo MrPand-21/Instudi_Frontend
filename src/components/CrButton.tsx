@@ -60,17 +60,17 @@ const CrButton: NextPage<CrButtonProps> = (props) => {
         ' 2xl:w-12 2xl:group-hover:w-14'
   } ${svgClassName}`;
 
-  const textClass = `group-hover:text-xl pt-1 2xl:pt-2 duration-300 transition-all ${
+  const textClass = `group-hover:text-xl text-lg pt-0.5 2xl:pt-2 duration-500 transition-all text-yellow-500 ${
     secondary
       ? 'group-hover:text-[var(--secondary-rgb)]'
       : 'group-hover:text-[var(--primary-rgb)]'
   } 
   ${
-    changeSvg ? 'group-hover:-translate-x-5' : 'group-hover:translate-x-2'
+    changeSvg ? 'group-hover:translate-x-8' : 'group-hover:translate-x-2'
   }  group-hover:translate-y-0.5 2xl:text-2xl 2xl:group-hover:text-3xl`;
 
   return (
-    <div className='group opacity-80 hover:opacity-100 inline transition-all peer-hover:opacity-100'>
+    <div className='group opacity-80 hover:opacity-100 inline transition-all peer-hover:opacity-100 '>
       <button className={buttonClass} {...rest}>
         {useSvg ? (
           <svg

@@ -107,7 +107,10 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
           </div>
           <div className='basis-5'></div>
         </div>
-        <CrMenuWrapper />
+        <div className='z-50 relative'>
+          <CrMenuWrapper />
+        </div>
+
         <div className='md:pt-[15vh]'>{children}</div>
       </body>
     </html>

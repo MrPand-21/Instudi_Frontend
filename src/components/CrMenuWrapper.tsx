@@ -4,6 +4,7 @@ import {NextPage} from 'next';
 import Logo from '../../public/static/2.png';
 import {useEffect, useRef, useState} from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface Props {}
 
@@ -41,26 +42,32 @@ const CrMenuWrapper: NextPage<Props> = ({}) => {
             : ' scale-0 translate-x-1/2 -translate-y-1/2'
         }
         antialiased text-md sm:text-lg underline underline-offset-2 decoration-wavy decoration-[var(--primary-rgb)] font-medium
-        text-[var(--foreground-text-rgb)] active:font-semibold active:text-xl active:no-underline transition-all`}>
+        text-[var(--foreground-text-rgb)] transition-all`}>
         <Image
           src={Logo}
           alt='Instudi Logo'
           width={120}
           height={180}
-          className='col-start-5 row-start-1 sm:-translate-x-1/2 sm:translate-y-1/2
+          className='col-start-5  row-start-1 sm:-translate-x-1/2 sm:translate-y-1/2
             border-2 rounded-full border-[var(--secondary-rgb)] mt-3 mr-3 self-start sm:scale-150'
         />
-        <div className='col-start-2 col-span-2 '>Anasayfa</div>
-        <div className='row-start-2 col-start-2 col-span-2 origin-bottom-left -rotate-[10deg]'>
+        <Link
+          href={'/'}
+          className='col-start-2 col-span-2 active:font-semibold active:text-xl active:no-underline'>
+          Anasayfa
+        </Link>
+        <div className='row-start-2 active:font-semibold active:text-xl active:no-underline col-start-2 col-span-2 origin-bottom-left -rotate-[10deg]'>
           Hakkımızda
         </div>
-        <div className='row-start-2 col-start-2 row-span-3 col-span-3 origin-bottom-left -rotate-[30deg]'>
+        <div className='row-start-2 active:font-semibold active:text-xl active:no-underline col-start-2 row-span-3 col-span-3 origin-bottom-left -rotate-[30deg]'>
           İletişim
         </div>
-        <div className='row-start-4 col-start-3 col-span-2 row-span-2 origin-top-left -rotate-[54deg]'>
+        <Link
+          href={'/login'}
+          className='row-start-4 active:font-semibold active:text-xl active:no-underline col-start-3 col-span-2 row-span-2 origin-top-left -rotate-[54deg]'>
           Giriş Yap
-        </div>
-        <div className='row-start-5 row-span-2 col-start-5 origin-top-left rotate-[275deg]'>
+        </Link>
+        <div className='row-start-5 active:font-semibold active:text-xl active:no-underline row-span-2 col-start-5 origin-top-left rotate-[275deg]'>
           Uygulama
         </div>
       </div>
