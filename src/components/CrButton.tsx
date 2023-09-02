@@ -8,8 +8,10 @@ export interface CrButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   content?: string;
   floatInvert?: boolean;
   svgClassName?: string;
+  outerClass?: string;
   changeSvg?: boolean;
   secondary?: boolean;
+  buttonClassName?: string;
 }
 
 const defaultProps = {
@@ -30,6 +32,8 @@ const CrButton: NextPage<CrButtonProps> = (props) => {
     svgClassName,
     changeSvg,
     secondary,
+    outerClass,
+    buttonClassName,
     ...rest
   } = props;
 
@@ -43,13 +47,13 @@ const CrButton: NextPage<CrButtonProps> = (props) => {
       useText && useSvg
         ? ' 2xl:mt-10 w-[60vw] 2xl:w-[30vw] lg:w-[clamp(6rem,12vw,11em)]'
         : useSvg
-        ? ' w-[clamp(1rem,3vw,3rem)]'
+        ? ' w-[clamp(3rem,8vw,9rem)] md:w-[clamp(1rem,3vw,3rem)]'
         : ''
-    }`;
+    } ${buttonClassName}`;
   const svgClass = `aspect-square overflow-hidden w-8 ${
     secondary
       ? 'fill-[var(--primary-rgb)] group-hover:fill-[var(--secondary-rgb)]'
-      : 'fill-[var(--primary-rgb)]'
+      : 'fill-[var(--primary-rgb)] '
   } inline-block  group-hover:w-10  transition-all
   ${
     useSvg && !useText
@@ -66,11 +70,14 @@ const CrButton: NextPage<CrButtonProps> = (props) => {
       : 'group-hover:text-[var(--primary-rgb)]'
   } 
   ${
-    changeSvg ? 'group-hover:translate-x-8' : 'group-hover:translate-x-2'
+    changeSvg
+      ? ' group-hover:translate-x-8 md:group-hover:-translate-x-4'
+      : ' group-hover:translate-x-2'
   }  group-hover:translate-y-0.5 2xl:text-2xl 2xl:group-hover:text-3xl`;
 
   return (
-    <div className='group opacity-80 hover:opacity-100 inline transition-all peer-hover:opacity-100 '>
+    <div
+      className={`group opacity-80 hover:opacity-100 inline transition-all peer-hover:opacity-100 ${outerClass}`}>
       <button className={buttonClass} {...rest}>
         {useSvg ? (
           <svg

@@ -66,7 +66,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
       lang={siteMetadata.language}
       className='overflow-x-hidden scroll-smooth'>
       <body className={inter.className}>
-        <div className='w-[100vw] fixed backdrop-blur-sm z-50 invisible md:visible	backdrop-filter: brightness(.5); text-[var(--foreground-rgb)] bg-slate-300/10 align-middle text-center h-[10vh] flex flex-row  '>
+        <div className='w-[100vw] fixed dark:mix-blend-screen mix-blend-multiply backdrop-blur-sm z-50 invisible md:visible	backdrop-filter: brightness(.5); text-[var(--foreground-rgb)] bg-slate-300/10 align-middle text-center h-[10vh] flex flex-row  '>
           <CrInstudiText useText={false} imgClass='shrink' />
           <div className='basis-[32%]'></div>
           <div className='grow flex flex-row-reverse items-center justify-center'>
