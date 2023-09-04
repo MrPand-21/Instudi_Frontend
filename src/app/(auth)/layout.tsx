@@ -22,7 +22,7 @@ const AuthLayout: NextPage<Props> = ({children}) => {
           viewBox='0 0 1440 320'>
           <path
             fill='#5271ff'
-            fill-opacity='1'
+            fillOpacity='1'
             d='M0,96L34.3,128C68.6,160,137,224,206,213.3C274.3,203,343,117,411,112C480,107,549,181,617,197.3C685.7,213,754,171,823,176C891.4,181,960,235,1029,250.7C1097.1,267,1166,245,1234,229.3C1302.9,213,1371,203,1406,197.3L1440,192L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z'></path>
         </svg>
         <div className='bg-gradient-to-b h-[70vh] via-[#8366ff] from-[var(--primary-rgb)] to-[#c986ff]'>
@@ -33,12 +33,12 @@ const AuthLayout: NextPage<Props> = ({children}) => {
           </div>
         </div>
         <svg
-          className='-translate-y-0.5'
+          className='-translate-y-0.5 '
           xmlns='http://www.w3.org/2000/svg'
           viewBox='0 0 1440 320'>
           <path
             fill='#c986ff'
-            fill-opacity='1'
+            fillOpacity='1'
             d='M0,96L34.3,128C68.6,160,137,224,206,213.3C274.3,203,343,117,411,112C480,107,549,181,617,197.3C685.7,213,754,171,823,176C891.4,181,960,235,1029,250.7C1097.1,267,1166,245,1234,229.3C1302.9,213,1371,203,1406,197.3L1440,192L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z'></path>
         </svg>
         <div className='svgs'>
@@ -53,11 +53,11 @@ const AuthLayout: NextPage<Props> = ({children}) => {
                 {' '}
                 <stop
                   id='stop1'
-                  stop-color='rgba(248, 117, 55, 1)'
+                  stopColor='rgba(248, 117, 55, 1)'
                   offset='0%'></stop>{' '}
                 <stop
                   id='stop2'
-                  stop-color='rgba(251, 168, 31, 1)'
+                  stopColor='rgba(251, 168, 31, 1)'
                   offset='100%'></stop>{' '}
               </linearGradient>{' '}
             </defs>{' '}
@@ -67,7 +67,7 @@ const AuthLayout: NextPage<Props> = ({children}) => {
               width='100%'
               height='100%'
               transform='translate(50 50)'
-              stroke-width='0'
+              strokeWidth='0'
               style={{transition: 'all 0.3s ease 0s'}}></path>{' '}
           </svg>
           <svg
@@ -82,11 +82,11 @@ const AuthLayout: NextPage<Props> = ({children}) => {
                 {' '}
                 <stop
                   id='stop1'
-                  stop-color='rgba(82, 113, 255, 1)'
+                  stopColor='rgba(82, 113, 255, 1)'
                   offset='0%'></stop>{' '}
                 <stop
                   id='stop2'
-                  stop-color='rgba(127, 178, 228, 0.7)'
+                  stopColor='rgba(127, 178, 228, 0.7)'
                   offset='100%'></stop>{' '}
               </linearGradient>{' '}
             </defs>{' '}
@@ -96,7 +96,7 @@ const AuthLayout: NextPage<Props> = ({children}) => {
               width='100%'
               height='100%'
               transform='translate(50 50)'
-              stroke-width='0'
+              strokeWidth='0'
               style={{transition: 'all 0.3s ease 0s'}}
               stroke='url(#sw-gradient)'></path>{' '}
           </svg>
@@ -112,11 +112,11 @@ const AuthLayout: NextPage<Props> = ({children}) => {
                 {' '}
                 <stop
                   id='stop1'
-                  stop-color='rgba(255, 0.799, 0.799, 1)'
+                  stopColor='rgba(255, 0.799, 0.799, 1)'
                   offset='0%'></stop>{' '}
                 <stop
                   id='stop2'
-                  stop-color='rgba(232.926, 195.43, 9.936, 1)'
+                  stopColor='rgba(232.926, 195.43, 9.936, 1)'
                   offset='100%'></stop>{' '}
               </linearGradient>{' '}
             </defs>{' '}
@@ -126,7 +126,7 @@ const AuthLayout: NextPage<Props> = ({children}) => {
               width='100%'
               height='100%'
               transform='translate(50 50)'
-              stroke-width='0'
+              strokeWidth='0'
               style={{transition: 'all 0.3s ease 0s'}}
               stroke='url(#sw-gradient-3)'></path>{' '}
           </svg>
@@ -142,11 +142,11 @@ const AuthLayout: NextPage<Props> = ({children}) => {
                 {' '}
                 <stop
                   id='stop1'
-                  stop-color='rgba(26.419, 174, 0, 1)'
+                  stopColor='rgba(26.419, 174, 0, 1)'
                   offset='0%'></stop>{' '}
                 <stop
                   id='stop2'
-                  stop-color='rgba(59, 215, 178.006, 1)'
+                  stopColor='rgba(59, 215, 178.006, 1)'
                   offset='100%'></stop>{' '}
               </linearGradient>{' '}
             </defs>{' '}
@@ -156,7 +156,7 @@ const AuthLayout: NextPage<Props> = ({children}) => {
               width='100%'
               height='100%'
               transform='translate(50 50)'
-              stroke-width='0'
+              strokeWidth='0'
               style={{transition: 'all 0.3s ease 0s'}}
               stroke='url(#sw-gradient)'></path>{' '}
           </svg>
@@ -172,11 +172,11 @@ const AuthLayout: NextPage<Props> = ({children}) => {
                 {' '}
                 <stop
                   id='stop1'
-                  stop-color='rgba(0, 21, 174, 1) '
+                  stopColor='rgba(0, 21, 174, 1) '
                   offset='0%'></stop>{' '}
                 <stop
                   id='stop2'
-                  stop-color='rgba(119, 59, 215, 1) '
+                  stopColor='rgba(119, 59, 215, 1) '
                   offset='100%'></stop>{' '}
               </linearGradient>{' '}
             </defs>{' '}
@@ -186,7 +186,7 @@ const AuthLayout: NextPage<Props> = ({children}) => {
               width='100%'
               height='100%'
               transform='translate(50 50)'
-              stroke-width='0'
+              strokeWidth='0'
               style={{transition: 'all 0.3s ease 0s'}}
               stroke='url(#sw-gradient)'></path>{' '}
           </svg>
@@ -202,11 +202,11 @@ const AuthLayout: NextPage<Props> = ({children}) => {
                 {' '}
                 <stop
                   id='stop1'
-                  stop-color='rgba(86.023, 178.283, 64.982, 1)'
+                  stopColor='rgba(86.023, 178.283, 64.982, 1)'
                   offset='0%'></stop>{' '}
                 <stop
                   id='stop2'
-                  stop-color='rgba(7.998, 238.264, 255, 1)'
+                  stopColor='rgba(7.998, 238.264, 255, 1)'
                   offset='100%'></stop>{' '}
               </linearGradient>{' '}
             </defs>{' '}
@@ -216,7 +216,7 @@ const AuthLayout: NextPage<Props> = ({children}) => {
               width='100%'
               height='100%'
               transform='translate(50 50)'
-              stroke-width='0'
+              strokeWidth='0'
               style={{transition: 'all 0.3s ease 0s'}}
               stroke='url(#sw-gradient-7)'></path>{' '}
           </svg>

@@ -36,7 +36,7 @@ const CrTextInput: NextPage<Props> = ({name, type, label, className}) => {
         {label ? (
           <span
             id={`${name}-label`}
-            className={`absolute z-20 mt-1.5 text-amber-500  text-lg antialiased
+            className={`pointer-events-none absolute z-20 mt-1.5 text-amber-500  text-lg antialiased
             ${
               meta.value
                 ? '-translate-y-10 left-1/2 -translate-x-1/2 text-xl underline underline-offset-4 decoration-solid decoration-[var(--secondary-rgb)]'
@@ -77,7 +77,7 @@ const CrTextInput: NextPage<Props> = ({name, type, label, className}) => {
               <svg
                 stroke='inherit'
                 fill='inherit'
-                stroke-width='0'
+                strokeWidth='0'
                 viewBox='0 0 24 24'
                 height='inherit'
                 width='inherit'
@@ -110,7 +110,7 @@ const CrTextInput: NextPage<Props> = ({name, type, label, className}) => {
               <svg
                 stroke='currentColor'
                 fill='currentColor'
-                stroke-width='0'
+                strokeWidth='0'
                 viewBox='0 0 24 24'
                 height='inherit'
                 width='inherit'

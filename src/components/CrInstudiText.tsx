@@ -9,30 +9,25 @@ interface Props {
   isBlock?: boolean;
   imgClass?: string;
   className?: string;
+  textClassName?: string;
   mini?: boolean;
 }
 
-const initialProps = {
-  useImg: true,
-  useText: true,
-  isBlock: true,
-  imgClass: '',
-  className: '',
-  mini: false,
-};
-
 const CrInstudiText: NextPage<Props> = ({
-  useImg,
-  useText,
-  imgClass,
-  isBlock,
-  className,
-  mini,
+  useImg = true,
+  useText = true,
+  imgClass = '',
+  textClassName = '',
+  isBlock = true,
+  className = '',
+  mini = false,
 }) => {
-  const textClass = `${mini ? 'text-4xl' : 'text-6xl'}  md:text-9xl ${
+  const textClass = `${
+    mini ? 'text-4xl md:text-7xl' : 'text-6xl md:text-9xl'
+  }   ${
     isBlock ? 'block indent-8' : 'inline grow'
   }  tracking-[-.1em] antialiased font-bold 
-    bg-gradient-to-br from-violet-600 to-indigo-600 bg-clip-text text-transparent`;
+  ${textClassName}  bg-gradient-to-br from-violet-600 to-indigo-600 bg-clip-text text-transparent`;
 
   return (
     <div
@@ -45,8 +40,8 @@ const CrInstudiText: NextPage<Props> = ({
           <Image
             src={Logo}
             alt='Instudi Logo'
-            width={100}
-            height={150}
+            width={95}
+            height={142.5}
             className={`2xl:hidden ${imgClass}`}
           />
           <Image
@@ -62,5 +57,4 @@ const CrInstudiText: NextPage<Props> = ({
     </div>
   );
 };
-CrInstudiText.defaultProps = initialProps;
 export default CrInstudiText;

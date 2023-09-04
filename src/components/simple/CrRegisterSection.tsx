@@ -42,7 +42,7 @@ const CrRegisterSection: NextPage<Props> = ({
         <svg
           stroke='inherit'
           fill='inherit'
-          stroke-width='0'
+          strokeWidth='0'
           viewBox='0 0 512 512'
           height='inherit'
           width='inherit'

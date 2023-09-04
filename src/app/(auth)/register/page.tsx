@@ -2,14 +2,13 @@
 import CrButton from '@/components/CrButton';
 import CrInstudiText from '@/components/CrInstudiText';
 import useTheme from '@/utils/hooks/useTheme';
-import logger from '@/utils/logger';
 import {Quicksand, Inter} from 'next/font/google';
 import {NextPage} from 'next';
 import Link from 'next/link';
 import {useState} from 'react';
 import CrRegisterSection from '@/components/simple/CrRegisterSection';
 import {useWindowWidth} from '@/utils/hooks/useWindowWidth';
-import RegisterWrapper from './RegisterWrapper';
+import SubRegisterPage from './SubRegisterPage';
 
 interface Props {}
 const quicksand = Quicksand({
@@ -158,14 +157,14 @@ const RegisterPage: NextPage<Props> = ({}) => {
         </div>
         <div
           className={`absolute transition-all duration-[2000ms] w-full h-full ${
-            isSectionConfirmed ? '' : '-translate-x-full'
+            isSectionConfirmed ? 'opacity-100' : '-translate-x-full opacity-0'
           }`}>
           <CrInstudiText
             useText={false}
             imgClass='mix-blend-multiply lg:mix-blend-screen relative left-1/2 -translate-x-1/2'
             className='hidden lg:block '
           />
-          <RegisterWrapper section={section} />
+          <SubRegisterPage section={section} />
         </div>
       </div>
 

@@ -11,7 +11,6 @@ export function useWindowWidth() {
         if (typeof window !== 'undefined') {
             setWindowWidth(window.innerWidth);
         }
-        logger("zorttt")
     }, []);
 
     useEffect(() => {

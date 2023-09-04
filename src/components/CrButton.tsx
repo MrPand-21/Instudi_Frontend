@@ -14,24 +14,16 @@ export interface CrButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   buttonClassName?: string;
 }
 
-const defaultProps = {
-  useSvg: true,
-  useText: true,
-  floatInvert: false,
-  changeSvg: false,
-  secondary: false,
-};
-
 const CrButton: NextPage<CrButtonProps> = (props) => {
   const {
-    useSvg,
-    useText,
+    useSvg = true,
+    useText = true,
     svgDs,
     content,
-    floatInvert,
+    floatInvert = false,
     svgClassName,
-    changeSvg,
-    secondary,
+    changeSvg = false,
+    secondary = false,
     outerClass,
     buttonClassName,
     ...rest
@@ -104,5 +96,4 @@ const CrButton: NextPage<CrButtonProps> = (props) => {
   );
 };
 
-CrButton.defaultProps = defaultProps;
 export default CrButton;
